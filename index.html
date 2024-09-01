@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Game</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <h1>Bat Ball Stump Game</h1>
+
+  <!-- Game Buttons -->
+  <button onclick="
+    computerChoice = generateComputerChoice();
+    let resultMsg = getResult('Bat', computerChoice);
+    showResult('Bat', computerChoice, resultMsg);
+  ">
+    <img src="image/bat.png" alt="Bat">
+  </button>
+
+  <button onclick="
+    computerChoice = generateComputerChoice();
+    resultMsg = getResult('Ball', computerChoice);
+    showResult('Ball', computerChoice, resultMsg);
+  ">
+    <img src="image/ball1.png" alt="Ball">
+  </button>
+
+  <button onclick="
+    computerChoice = generateComputerChoice();
+    resultMsg = getResult('Stump', computerChoice);
+    showResult('Stump', computerChoice, resultMsg);
+  ">
+    <img src="image/stump.png" alt="Stump">
+  </button>
+
+  <!-- Game Results -->
+  <p id="user-move"></p>
+  <p id="computer-move"></p>
+  <h3 id="result"></h3>
+  <h3 id="score"></h3>
+
+  <!-- Control Buttons -->
+  <button id="reset" onclick="localStorage.clear(); resetScore();">Reset</button>
+  <button id="rules-button">Show Rules</button>
+
+
+
+  <!-- Rules Modal -->
+  <div id="rules-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Game Rules</h2>
+      <ul>
+        <li><strong>Bat vs. Ball:</strong> Bat wins against Ball.</li>
+        <li><strong>Ball vs. Stump:</strong> Ball wins against Stump.</li>
+        <li><strong>Stump vs. Bat:</strong> Stump wins against Bat.</li>
+        <li>If both the user and the computer select the same option, it's a tie.</li>
+        <li>The objective is to win more rounds than the computer.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>Designed with ❤️ by <a href="https://haidarraza21.github.io/haidar/" target="_blank">Md Haidar Raza</a></p>
+  </footer>
+
+
+  <!-- Script for Modal and Balloon Popup -->
+  <script>
+    // Modal functionality
+    var modal = document.getElementById("rules-modal");
+    var btn = document.getElementById("rules-button");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+  </script>
+</body>
+
+</html>
