@@ -3,7 +3,7 @@
 **Bat Ball Stump** is a fun and interactive web-based game inspired by the classic "Rock, Paper, Scissors," with a cricket-themed twist! Challenge the computer and see if you can outsmart it in this exciting showdown.
 
 ## 🚀 Live Demo
-Check out the live version of the game: [Bat Ball Stump Game](https://haidarraza21.github.io/bat-ball-stump/) *(Replace with your actual live demo link)*
+Check out the live version of the game: [Bat Ball Stump Game](https://haidarraza21.github.io/bat-ball-stump/) 
 
 ## 📝 Game Description
 - **Objective**: Choose between Bat, Ball, or Stump and try to beat the computer. The winner is decided based on the following rules:
